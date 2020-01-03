@@ -21,7 +21,7 @@ SETUP:
   [3] Click on show client secret. Copy the Client Id, Client Secret Id, and your Spotify username.
       Paste them into the commented out section in music.py for reference
 
-  [4] Click on "Edit Settings" and change the redirect uris to "http://google.ca"
+  [4] Click on "Edit Settings" and change the redirect uris to "http://google.ca/"
 
   [5] In your web browser, login into the Spotify Web Player and create a new playlist.
       Right click on name of the playlist and select "Copy Playlist Link". Paste the link into music.py
@@ -38,13 +38,13 @@ SETUP:
 
         $env:SPOTIPY_CLIENT_ID="<your client id>"
         $env:SPOTIPY_CLIENT_SECRET="<your client secret>"
-        $env:SPOTIPY_REDIRECT_URI="http://google.ca"
+        $env:SPOTIPY_REDIRECT_URI="http://google.ca/"
 
       MAC: 
 
         EXPORT SPOTIPY_CLIENT_ID="<your client id>"
         EXPORT SPOTIPY_CLIENT_SECRET="<your client secret>"
-        EXPORT SPOTIPY_REDIRECT_URI="http://google.ca"
+        EXPORT SPOTIPY_REDIRECT_URI="http://google.ca/"
 
   HOW TO RUN:
 
