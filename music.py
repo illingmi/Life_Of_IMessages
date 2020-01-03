@@ -19,12 +19,12 @@ username = sys.argv[1]
 playlist_id = sys.argv[2]
 scope = 'user-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private'
 
-# USER ID: 	mibaeoch3ierdvfq3g2wdvvl5
-# PLAYLIST ID: 6RRGjdDeTm9tBI1nwkVzBE
+# USER ID: 	<your username>
+# PLAYLIST ID: <your playlist id>
 
 # USER AUTHENTICATION COMMANDS:
-    # $env:SPOTIPY_CLIENT_ID="a8fd8489dea042b9b5b705907665e75b"
-    # $env:SPOTIPY_CLIENT_SECRET="4f2b0aef10054fc18f2a3711b9d8c14b"
+    # $env:SPOTIPY_CLIENT_ID="<your client id>"
+    # $env:SPOTIPY_CLIENT_SECRET="<your client secret>"
     # $env:SPOTIPY_REDIRECT_URI="http://google.ca/"
 
 # Erase cache and prompt for user permission
@@ -50,8 +50,6 @@ df['datetime'].dtype
 
 # Get list of spotify songs
 dfSpotify = df[df['Text'].str.contains("open.spotify", case=False) == True].sort_values(by='datetime')
-dfAppleMusic = df[df['Text'].str.contains("itunes.apple", case=False) == True].sort_values(by='datetime')
-print(dfAppleMusic)
 
 dfAlbums = dfSpotify[dfSpotify['Text'].str.contains("album", case=False) == True]
 dfTracks = dfSpotify[dfSpotify['Text'].str.contains("track", case=False) == True]
