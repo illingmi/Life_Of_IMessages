@@ -1,0 +1,53 @@
+OVERVIEW:
+
+A short python script that takes all the links to Spotify songs
+that have been texted to me and adds them into a playlist
+
+REQUIREMENTS:
+
+  [+]  Spotify account
+
+  [+]  SPOTIPY API
+       Install using 'pip install spotipy'
+       --> for more information visit https://spotipy.readthedocs.io/en/latest/#installation
+
+SETUP:
+
+  [1] Login to Spotify Developer with your Spotify Login
+      --> https://developer.spotify.com/dashboard/login
+
+  [2] After logging in, click on one of the rectangles and "CREATE AN APP" for non-commercial use
+
+  [3] Click on show client secret. Copy the Client Id, Client Secret Id, and your Spotify username.
+      Paste them into the commented out section in music.py for reference
+
+  [4] Click on "Edit Settings" and change the redirect uris to "http://google.ca"
+
+  [5] In your web browser, login into the Spotify Web Player and create a new playlist.
+      Right click on name of the playlist and select "Copy Playlist Link". Paste the link into music.py
+      in the space for "PLAYLIST ID: ".
+
+      The playlist id is the last part after playlist/
+
+      (ie) link =  https://open.spotify.com/playlist/7MMGjdDeTm9tBI1nwkVzBE
+          Playlist ID = 7MMGjdDeTm9tBI1nwkVzBE
+
+  [6] In the terminal before running the script, we need to grant permissions
+
+      WINDOWS:
+
+        $env:SPOTIPY_CLIENT_ID="<your client id>"
+        $env:SPOTIPY_CLIENT_SECRET="<your client secret>"
+        $env:SPOTIPY_REDIRECT_URI="http://google.ca"
+
+      MAC: 
+
+        EXPORT SPOTIPY_CLIENT_ID="<your client id>"
+        EXPORT SPOTIPY_CLIENT_SECRET="<your client secret>"
+        EXPORT SPOTIPY_REDIRECT_URI="http://google.ca"
+
+  HOW TO RUN:
+
+  Run the script in the terminal using:
+
+        python .\music.py <your username> <your playlist id>
